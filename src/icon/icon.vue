@@ -1,12 +1,14 @@
 <template>
   <div class="">
     content
+    <i class="iconfont icon-icon-test"></i>
+    <i class="iconfont icon-icon-test3"></i>
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'z-icon',
   components: {},
   props: [],
   data () {
@@ -21,10 +23,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.z-icon{
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-}
+<style  scoped>
+@import url(//at.alicdn.com/t/font_2896007_0phfax1ddwml.css);
 </style>
