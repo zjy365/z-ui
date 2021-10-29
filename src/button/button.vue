@@ -1,10 +1,10 @@
 <template>
   <button
     class="z-button"
-    :class="[`mc-button--${type}`, {'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': disabled }]"
+    :class="[`z-button--${type}`, {'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': disabled }]"
   >
     <span>
-      <slot>按钮</slot>
+      <slot></slot>
     </span>
   </button>
 </template>
@@ -48,25 +48,64 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.z-button{
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  border: 0;
-  &.is-plain:hover,&.is-plain:focus {
-    background: #fff;
-    border-color: #409eff;
-    color: #409eff;
-  }
-  &.is-round {
-    border-radius: 20px;
-    padding: 12px 23px;
-  }
-  &.is-circle {
-    border-radius: 50%;
-    padding: 12px;
+
+$default: #409eff;
+$success: #67c23a;
+$danger: #f56c6c;
+$info: #909399;
+$warn: #cf9236;
+@mixin colorBtn($color) {
+  background: $color;
+  &:hover {
+    color: $color;
+    &:before,
+    &:after {
+      background: $color;
+    }
   }
 }
+.z-button--default {
+  @include colorBtn($default);
+}
+
+.z-button--success  {
+  @include colorBtn($success);
+}
+
+.z-button--danger  {
+  @include colorBtn($danger);
+}
+
+.z-button--info  {
+  @include colorBtn($info);
+}
+.z-button--warn  {
+  @include colorBtn($warn);
+}
+// .z-button{
+//   box-sizing: border-box;
+//   outline: none;
+//   margin: 0;
+//   transition: 0.1s;
+//   font-weight: 500;
+//   border: 0;
+//   &.is-plain:hover,&.is-plain:focus {
+//     background: #fff;
+//     border-color: #409eff;
+//     color: #409eff;
+//   }
+//   &.is-round {
+//     border-radius: 20px;
+//     padding: 12px 23px;
+//   }
+//   &.is-circle {
+//     border-radius: 50%;
+//     padding: 12px;
+//   }
+// }
+// @each $type in (primary, success, warning, danger, info) {
+//   .z-button--#{$type} {
+//     background-color: red;
+//   }
+// }
 </style>
