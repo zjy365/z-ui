@@ -1,21 +1,21 @@
 <template>
-  <div class="">
-    content
-    <i class="iconfont icon-icon-test"></i>
-    <i class="iconfont icon-icon-test3"></i>
-  </div>
+    <i :class="iconStyle"></i>
 </template>
 
 <script>
 export default {
   name: 'z-icon',
   components: {},
-  props: [],
+  props: ['icon'],
   data () {
     return {
     }
   },
-  computed: {},
+  computed: {
+    iconStyle() {
+      return 'iconfont'+' '+this.icon
+    }
+  },
   watch: {},
   created () {},
   mounted () {},
@@ -24,5 +24,6 @@ export default {
 </script>
 
 <style  scoped>
-@import url(//at.alicdn.com/t/font_2896007_0phfax1ddwml.css);
+@import url(//at.alicdn.com/t/font_2896007_iwp66057eos.css);
+
 </style>

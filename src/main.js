@@ -3,11 +3,12 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-const context = require.context('./', true,  /^((?!main\.js).)+\.js$/)
+const context = require.context('./packages', true,  /^((?!main\.js).)+\.js$/)
+
 try {
   context.keys().forEach(path => {
     let res = context(path)
-    // console.log(res);
+    // console.log(path);
     Vue.component(res.default.name, res.default)
   })
 } catch (e) {

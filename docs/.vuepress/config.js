@@ -1,5 +1,6 @@
 module.exports = {
     title: 'Z-UI',
+    plugins: ['demo-container'],
     themeConfig: {
         // logo: '/assets/img/logo.png', // logo
         // lastUpdated: 'Last Updated', // string | boolean 时间戳
@@ -10,7 +11,7 @@ module.exports = {
                 text: 'Languages',
                 ariaLabel: 'Language Menu',
                 items: [
-                  { text: 'Chinese', link: '/language/chinese/' },
+                  { text: '中文', link: '/language/chinese/' },
                   { text: 'English', link: '/language/english/' }
                 ]
             },
@@ -26,19 +27,16 @@ module.exports = {
                   'views/guide/themes.md'
                 ]
               },
-              // {
-              //   title: '设计',
-              //   collapsable: true,
-              //   children: [
-              //     'views/design/color/',
-              //   ]
-              // },
               {
                 title: '组件',
                 collapsable: false,
                 children: [
                   'views/components/button/',
-                  'views/components/radio/'
+                  'views/components/radio/',
+                  'views/components/icons/',
+                  'views/components/card/',
+                  'views/components/row/',
+                  'views/components/table/',
                 ]
               },
         ]

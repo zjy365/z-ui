@@ -4,7 +4,7 @@ title: radio
 
 # radio
 
-| Tables        | Are           | Cool  |
+| 参数          | 类型           | 默认值  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |

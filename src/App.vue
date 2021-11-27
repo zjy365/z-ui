@@ -1,11 +1,8 @@
 <template>
   <div id="app">
     <h1>测试</h1>
-    <z-button :plain="true"  >按钮</z-button>
-    <z-button :round="true"  >按钮</z-button>
-    <z-button circle  >按钮</z-button>
-    <z-button type="primary">按钮</z-button>
-    <z-icon/>
+    <z-button type="default"  >主要按钮</z-button>
+    <z-table></z-table>
   </div>
 </template>
 
